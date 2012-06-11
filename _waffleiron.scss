@@ -1,0 +1,82 @@
+// public api:
+// @include col(1,0);
+// @include row();
+
+
+// there is gutter on both sides of each col
+
+$width: 940px;
+$cols: 12;
+$gutter: 20px;
+$colWidth: $width / $cols;
+
+//$breakpoint: #{$width - 1};
+$responsive-width: 90%;
+$responsive-margin: (100-$responsive-width)/2;
+
+@mixin repo-row() {
+  // must set this manually sass 3.2 will fix this
+  @media only screen and (max-width: 939px) {
+    width: 100%;
+  }
+}
+@mixin repo-col($col, $offset) {
+  // must set this manually sass 3.2 will fix this
+  // small screens?
+  @media only screen and (max-width: 499px ) {
+    width: $responsive-width;
+    margin-left: $responsive-margin;
+    margin-right: $responsive-margin;
+  }
+
+  @media only screen and (max-width: 939px) and (min-width: 500px) {
+    $large-width: ($col/$cols) * 100%;
+    // this is gross!
+    @if $offset > 0 {
+      $offset-width: ($offset/$cols) * 100%;
+      margin-left: $offset-width;
+    } @else {
+      $large-width: $large-width - 2;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    width: $large-width;
+  }
+}
+@mixin prepend($n: 1) {
+  margin-left: $colWidth * $n;
+}
+@mixin append($n: 1) {
+  margin-right: $totalColWidth * $n;
+}
+@mixin width($n: 1) {
+  width: ($n * $colWidth) - $gutter;
+}
+@mixin gutter($col, $offset) {
+  margin-right: $gutter;
+}
+@mixin row() {
+  width: $width;
+  margin: 0 auto;
+  @include repo-row();
+}
+@mixin col($col: 1, $offset: 0 ) {
+  // $col = width in cols
+  // $offset = offset in cols
+  display: inline-block;
+  vertical-align: top;
+  .ie7 & {
+    zoom: 1;
+    display: inline;
+  }
+  @include width($col);
+  @if $offset > 0 {
+    @include prepend($offset);
+  }
+  @else {
+    margin-left: $gutter/2;
+  }
+  margin-right: $gutter/2;
+  @include repo-col($col, $offset);
+}
+
