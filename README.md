@@ -34,6 +34,9 @@ Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you 
 4. Add the Waffle mixins to your scss
 5. Enjoy a flexible grid that you can drop in where you want.
 
+## Issues
+1. You must minify your HTML ( Since we use inline-block )
+
 Wafflecoptor:
 
 	wafflewafflewafflewaffle
