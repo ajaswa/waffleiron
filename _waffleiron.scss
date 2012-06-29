@@ -2,17 +2,18 @@
 // @include col(1,0);
 // @include row();
 
+// override these before you import this file if you don't want to use the defaults.
+$wi-width: 940px !default;
+$wi-cols: 12 !default;
+$wi-gutter: 20px !default;
+$wi-responsive-width: 90% !default;
 
-// there is gutter on both sides of each col
 
-$width: 940px;
-$cols: 12;
-$gutter: 20px;
-$colWidth: $width / $cols;
+// the maths for cal width and responsive stuff.
+$wi-col-width: $wi-width / $wi-cols;
 
-//$breakpoint: #{$width - 1};
-$responsive-width: 90%;
-$responsive-margin: (100-$responsive-width)/2;
+//$wi-breakpoint: #{$wi-width - 1};
+$wi-responsive-margin: (100-$wi-responsive-width)/2;
 
 @mixin repo-row() {
   // must set this manually sass 3.2 will fix this
@@ -24,19 +25,19 @@ $responsive-margin: (100-$responsive-width)/2;
   // must set this manually sass 3.2 will fix this
   // small screens?
   @media only screen and (max-width: 499px ) {
-    width: $responsive-width;
-    margin-left: $responsive-margin;
-    margin-right: $responsive-margin;
+    width: $wi-responsive-width;
+    margin-left: $wi-responsive-margin;
+    margin-right: $wi-responsive-margin;
   }
 
   @media only screen and (max-width: 939px) and (min-width: 500px) {
-    $large-width: ($col/$cols) * 100%;
+    $large-width: ($col/$wi-cols) * 100%;
     // this is gross!
     @if $offset > 0 {
-      $offset-width: ($offset/$cols) * 100%;
-      margin-left: $offset-width;
+      $wi-offset-width: ($offset/$wi-cols) * 100%;
+      margin-left: $wi-offset-width;
     } @else {
-      $large-width: $large-width - 2;
+      $wi-large-width: $wi-large-width - 2;
       margin-left: 1%;
       margin-right: 1%;
     }
@@ -44,19 +45,20 @@ $responsive-margin: (100-$responsive-width)/2;
   }
 }
 @mixin prepend($n: 1) {
-  margin-left: $colWidth * $n;
+  margin-left: $wi-col-width * $n;
 }
 @mixin append($n: 1) {
-  margin-right: $totalColWidth * $n;
+  /* doesn't do anything... */
+  /* margin-right: $totalColWidth * $n; */
 }
 @mixin width($n: 1) {
-  width: ($n * $colWidth) - $gutter;
+  width: ($n * $wi-col-width) - $wi-gutter;
 }
 @mixin gutter($col, $offset) {
-  margin-right: $gutter;
+  margin-right: $wi-gutter;
 }
 @mixin row() {
-  width: $width;
+  width: $wi-width;
   margin: 0 auto;
   @include repo-row();
 }
@@ -74,9 +76,9 @@ $responsive-margin: (100-$responsive-width)/2;
     @include prepend($offset);
   }
   @else {
-    margin-left: $gutter/2;
+    margin-left: $wi-gutter/2;
   }
-  margin-right: $gutter/2;
+  margin-right: $wi-gutter/2;
   @include repo-col($col, $offset);
 }
 
