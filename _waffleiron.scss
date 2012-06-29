@@ -34,10 +34,10 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
     $large-width: ($col/$wi-cols) * 100%;
     // this is gross!
     @if $offset > 0 {
-      $wi-offset-width: ($offset/$wi-cols) * 100%;
-      margin-left: $wi-offset-width;
+      $offset-width: ($offset/$wi-cols) * 100%;
+      margin-left: $offset-width;
     } @else {
-      $wi-large-width: $wi-large-width - 2;
+      $large-width: $large-width - 2;
       margin-left: 1%;
       margin-right: 1%;
     }
