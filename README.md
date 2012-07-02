@@ -44,6 +44,10 @@ HTML:
       </div>
     </section>
 
+Which would give you something like this: 
+
+![demo](/demo/demo.png)
+
 
 ## What is Waffle Iron?
 Waffle Iron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.
