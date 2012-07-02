@@ -3,8 +3,52 @@ Because waffles are delicious.
 
 ===========
 
+## Use
+
+This will give you a row and elements that are 3 cols wide:
+
+    .element-wrapping-cols {
+      @include row();
+  	}
+  	.element-you-want-to-be-3-cols-wide {
+      @include col(3);
+  	}
+
+
+A real world example of this would be:
+
+SCSS:
+
+    section {
+      @include row();
+      outline: 2px solid red;
+      .panel {
+        @include col(4);
+        outline: 2px solid blue;
+      }
+    }
+HTML:
+
+    <section>
+      <div class="panel">
+        <h2>About Waffle Iron</h2>
+        <p>Waffle Iron is amazeballs, 0_o lol omg!!!11 one.</p>
+      </div>
+      <div class="panel">
+      	<h2>Download Waffle Iron</h2>
+      	<p>Click the download Waffle Iron button hidden somewhere on this page.</p>
+      </div>
+      <div class="panel">
+      	<h2>Help Waffle Iron</h2>
+      	<p>If you have an awesome idea for Waffle Iron, git on github and do some stuff.</p>
+      </div>
+    </section>
+
+
 ## What is Waffle Iron?
 Waffle Iron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.
+
+
 
 ### What? No floats?
 Inline block is your new friend, friend. No floats mean that you don't have to clear them.
