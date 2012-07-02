@@ -5,7 +5,7 @@
 // override these before you import this file if you don't want to use the defaults.
 $wi-width: 940px !default;
 $wi-cols: 12 !default;
-$wi-gutter: 20px !default;
+$wi-gutter: 20px !default; // must be divisible by 2 for accratue spacing.
 $wi-responsive-width: 90% !default;
 
 
@@ -44,12 +44,12 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
     width: $large-width;
   }
 }
+// prepend and append do the same math but they are dependent on a number being passed in.
 @mixin prepend($n: 1) {
   margin-left: ($wi-col-width * $n) + ($wi-gutter/2);
 }
 @mixin append($n: 1) {
-  /* doesn't do anything... */
-  /* margin-right: $totalColWidth * $n; */
+  margin-right: ($wi-col-width * $n) + ($wi-gutter/2);
 }
 @mixin width($n: 1) {
   width: ($n * $wi-col-width) - $wi-gutter;
@@ -62,7 +62,7 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
   margin: 0 auto;
   @include repo-row();
 }
-@mixin col($col: 1, $offset: 0 ) {
+@mixin col($col: 1, $offset: 0, $append: 0 ) {
   // $col = width in cols
   // $offset = offset in cols
   display: inline-block;
@@ -78,7 +78,11 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
   @else {
     margin-left: $wi-gutter/2;
   }
-  margin-right: $wi-gutter/2;
+  @if $append > 0 {
+    @include append($append);
+  }
+  @else {
+    margin-right: $wi-gutter/2;
+  }
   @include repo-col($col, $offset);
 }
-
