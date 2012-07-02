@@ -46,7 +46,7 @@ HTML:
 
 Which would give you something like this: 
 
-![demo](/demo/demo.png)
+![demo](https://github.com/ajaswa/waffleiron/raw/master/demo/demo.png)
 
 
 ## What is Waffle Iron?
