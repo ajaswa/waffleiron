@@ -45,7 +45,7 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
   }
 }
 @mixin prepend($n: 1) {
-  margin-left: $wi-col-width * $n;
+  margin-left: ($wi-col-width * $n) + ($wi-gutter/2);
 }
 @mixin append($n: 1) {
   /* doesn't do anything... */
