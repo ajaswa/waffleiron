@@ -1,0 +1,62 @@
+/* @import 'grid'; */
+@import 'waffleiron';
+
+/* $cols 12 */
+/* $width 900 */
+/* $gutter 10 */
+
+#grid-demo {
+  .row {
+    @include row();
+    &.first {
+      outline: 1px solid red;
+      margin-bottom: 25px;
+    }
+    &.second {
+      outline: 1px solid yellow;
+      margin-bottom: 25px;
+    }
+    .col-1 {
+    }
+    .col-2 {
+      @include col(2);
+    }
+    .col-3 {
+      @include col(3);
+    }
+    .col-4 {
+      @include col(4);
+    }
+    .col-5 {
+      @include col(5);
+    }
+    .col-6 {
+      @include col(6);
+    }
+    .col-7 {
+      @include col(7);
+    }
+    .col-8 {
+      @include col(8);
+    }
+    .col-9 {
+      @include col(9);
+    }
+    .col-10 {
+      @include col(10);
+    }
+    .col-11 {
+      @include col(11);
+    }
+    .col-12 {
+      @include col(12);
+    }
+    > div {
+      outline: 1px solid blue;
+      min-height: 50px;
+      >img {
+        width: 100%;
+      }
+    }
+  }
+}
