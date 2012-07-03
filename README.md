@@ -5,6 +5,19 @@ Because waffles are delicious.
 
 ## Use
 
+
+Add this to the top of your application.css.scss file:
+
+
+    /* waffleiron config - set these to match your grid */
+    $wi-width: 960px;
+    $wi-cols: 12;
+    $wi-gutter: 10px;
+    $wi-responsive-width: 90%;
+    @import 'waffleiron';
+
+
+
 This will give you a row and elements that are 3 cols wide:
 
     .element-wrapping-cols {
