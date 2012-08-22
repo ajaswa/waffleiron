@@ -100,7 +100,7 @@ Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you 
 
 Wafflecoptor:
 
-  wafflewafflewafflewaffle
+    wafflewafflewafflewaffle
            waffle             waffle
         wafflewaffle          waffle
       wafflewafflewafflewafflewafflewaffle
