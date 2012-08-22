@@ -59,7 +59,8 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
 }
 @mixin row() {
   width: $wi-width;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   @include repo-row();
 }
 @mixin col($col: 1, $offset: 0, $append: 0 ) {
