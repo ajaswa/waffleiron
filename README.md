@@ -22,10 +22,10 @@ This will give you a row and elements that are 3 cols wide:
 
     .element-wrapping-cols {
       @include row();
-  	}
-  	.element-you-want-to-be-3-cols-wide {
+    }
+    .element-you-want-to-be-3-cols-wide {
       @include col(3);
-  	}
+    }
 
 
 A real world example of this would be:
@@ -48,12 +48,12 @@ HTML:
         <p>Waffle Iron is amazeballs, 0_o lol omg!!!11 one.</p>
       </div>
       <div class="panel">
-      	<h2>Download Waffle Iron</h2>
-      	<p>Click the download Waffle Iron button hidden somewhere on this page.</p>
+        <h2>Download Waffle Iron</h2>
+        <p>Click the download Waffle Iron button hidden somewhere on this page.</p>
       </div>
       <div class="panel">
-      	<h2>Help Waffle Iron</h2>
-      	<p>If you have an awesome idea for Waffle Iron, git on github and do some stuff.</p>
+        <h2>Help Waffle Iron</h2>
+        <p>If you have an awesome idea for Waffle Iron, git on github and do some stuff.</p>
       </div>
     </section>
 
@@ -80,13 +80,13 @@ Built into Waffle Iron are some handy helpers to get your site all responsive. A
 Drop Waffle Iron in where you need a grid. Leave it out where it doesn't make sense. Write your CSS as fast as you can.
 
 ## Why should I use it?
-Cause its awesome and fast. If you don't want to use it half way though a project you can easily pull it out and write your own CSS without needed to rewrite your markup or change your CSS.
+Cause it's awesome and fast. If you don't want to use it half way through a project you can easily pull it out and write your own CSS without needing to rewrite your markup or change your CSS.
 
 ## Support
 Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you use html tag conditionals IE7 support is built in, otherwise you'll have to tweek some things by adding the IE7 inline-block hack:
 
-	display: inline;
-	zoom: 1;
+  display: inline;
+  zoom: 1;
 
 ## Ok I'm convinced
 1. Use SASS/SCSS
@@ -100,12 +100,12 @@ Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you 
 
 Wafflecoptor:
 
-	wafflewafflewafflewaffle
-	         waffle							waffle
-	      wafflewaffle					waffle
-	    wafflewafflewafflewafflewafflewaffle
-	   wafflewafflewaffle
-	   wafflewafflewaffle
-	     wafflewaffle
-	    waf			fle
-	  waffle	   waffle
+  wafflewafflewafflewaffle
+           waffle             waffle
+        wafflewaffle          waffle
+      wafflewafflewafflewafflewafflewaffle
+     wafflewafflewaffle
+     wafflewafflewaffle
+       wafflewaffle
+      waf     fle
+    waffle     waffle
