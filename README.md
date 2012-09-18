@@ -14,6 +14,9 @@ Add this to the top of your application.css.scss file:
     $wi-cols: 12;
     $wi-gutter: 10px;
     $wi-responsive-width: 90%;
+    $wi-stacked-breakpoint: 500px;
+    /* if you want IE7 support add the line below */
+    $wi-ie7: true;
     @import 'waffleiron';
 
 
@@ -61,10 +64,15 @@ Which would give you something like this:
 
 ![demo](https://github.com/ajaswa/waffleiron/raw/master/demo/demo.png)
 
+### Other options
+With the col() include you can specify two other parameriters. After the number of columns you want to can add prepend and append numbers.
+
+    @include col(2, 1, 4);
+
+This will give you an element two columns wide, prepended by one column and appended by 4 columns.
 
 ## What is Waffle Iron?
 Waffle Iron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.
-
 
 
 ### What? No floats?
@@ -94,6 +102,7 @@ Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you 
 3. Write your markup semantically
 4. Add the Waffle mixins to your scss
 5. Enjoy a flexible grid that you can drop in where you want.
+
 
 ## Issues
 1. You must minify your HTML ( Since we use inline-block )
