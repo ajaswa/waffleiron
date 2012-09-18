@@ -9,6 +9,7 @@ $wi-gutter: 20px !default; // must be divisible by 2 for accratue spacing.
 $wi-responsive-width: 90% !default;
 $wi-repo-step2: 499px !default;
 
+$wi-ie7: false !default;
 
 
 // the maths for cal width and responsive stuff.
@@ -69,9 +70,11 @@ $wi-responsive-margin: (100-$wi-responsive-width)/2;
   // $offset = offset in cols
   display: inline-block;
   vertical-align: top;
-  .ie7 & {
-    zoom: 1;
-    display: inline;
+  @if $wi-ie7 {
+    .ie7 & {
+      zoom: 1;
+      display: inline;
+    }
   }
   @include width($col);
   @if $offset > 0 {
