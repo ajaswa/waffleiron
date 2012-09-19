@@ -15,7 +15,7 @@ Add this to the top of your application.css.scss file:
     $wi-gutter: 10px;
     $wi-responsive-width: 90%;
     $wi-stacked-breakpoint: 500px;
-    /* if you want IE7 support add the line below */
+    /* if you want IE7 support via HTML/body tag conditionals add the line below */
     $wi-ie7: true;
     @import 'waffleiron';
 
@@ -91,10 +91,9 @@ Drop Waffle Iron in where you need a grid. Leave it out where it doesn't make se
 Cause it's awesome and fast. If you don't want to use it half way through a project you can easily pull it out and write your own CSS without needing to rewrite your markup or change your CSS.
 
 ## Support
-Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you use html tag conditionals IE7 support is built in, otherwise you'll have to tweek some things by adding the IE7 inline-block hack:
+Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you use html tag conditionals IE7 support is built in, otherwise you'll have to tweek some things by adding the following to your config block:
 
-  display: inline;
-  zoom: 1;
+    $wi-ie7: true;
 
 ## Ok I'm convinced
 1. Use SASS/SCSS
