@@ -1,0 +1,14 @@
+require 'lib/waffleiron/version'
+
+desc 'build ruby gem'
+task :build do
+  puts 'Copying file...'
+  `cp ../_waffleiron.scss app/assets/stylesheets/`
+  puts 'Building gem...'
+  `gem build waffleiron.gemspec`
+  puts 'Pushing gem...'
+  `gem push waffleiron-#{Waffleiron::VERSION}.gem`
+  puts 'Cleaning up...'
+  `rm app/assets/stylesheets/_waffleiron.scss`
+  puts 'Done!'
+end
