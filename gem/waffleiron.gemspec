@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{}
   gem.homepage      = ""
 
-  gem.files         = 'app/assets/stylesheets/_waffleiron.scss'
+  gem.files         = ['app/assets/stylesheets/_waffleiron.scss', 'lib/waffleiron/version.rb', 'lib/waffleiron/engine.rb', 'lib/waffleiron.rb']
   gem.name          = "waffleiron"
   gem.require_paths = ["lib"]
   gem.version       = Waffleiron::VERSION
