@@ -10,11 +10,11 @@ Add this to the top of your application.css.scss file:
 
 
     /* waffleiron config - set these to match your grid */
-    $wi-width: 960px;
+    $wi-width: 940px;
     $wi-cols: 12;
-    $wi-gutter: 10px;
-    $wi-responsive-width: 90%;
-    $wi-stacked-breakpoint: 500px;
+    $wi-gutter: 20px;
+    $wi-stacked-width: 90%;
+    $wi-stacked-breakpoint: 499px;
     /* if you want IE7 support via HTML/body tag conditionals add the line below */
     $wi-ie7: true;
     @import 'waffleiron';
