@@ -17,6 +17,9 @@ Add this to the top of your application.css.scss file:
     $wi-stacked-breakpoint: 499px;
     /* if you want IE7 support via HTML/body tag conditionals add the line below */
     $wi-ie7: true;
+    /* if you want to turn off the responsiveness of Waffleiron set this to false */
+    $wi-responsive: true;
+
     @import 'waffleiron';
 
 

@@ -10,6 +10,7 @@ $wi-stacked-width: 90% !default;
 $wi-stacked-breakpoint: 499px !default;
 
 $wi-ie7: false !default;
+$wi-responsive: true !default;
 
 $wi-fluid-start: #{$wi-width - 1};
 $wi-fluid-end: #{$wi-stacked-breakpoint + 1};
@@ -65,7 +66,9 @@ $wi-col-width: $wi-width / $wi-cols;
   width: $wi-width;
   margin-left: auto;
   margin-right: auto;
-  @include responsive-row();
+  @if $wi-responsive {
+    @include responsive-row();
+  }
 }
 @mixin col($col: 1, $offset: 0, $append: 0 ) {
   // $col = width in cols
@@ -91,5 +94,7 @@ $wi-col-width: $wi-width / $wi-cols;
   @else {
     margin-right: $wi-gutter/2;
   }
-  @include responsive-col($col, $offset, $append);
+  @if $wi-responsive {
+    @include responsive-col($col, $offset, $append);
+  }
 }
