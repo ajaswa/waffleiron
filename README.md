@@ -9,15 +9,15 @@ Because waffles are delicious.
 Add this to the top of your application.css.scss file:
 
 
-    /* waffleiron config - set these to match your grid */
+    // waffleiron config - set these to match your grid
     $wi-width: 940px;
     $wi-cols: 12;
     $wi-gutter: 20px;
     $wi-stacked-width: 90%;
     $wi-stacked-breakpoint: 499px;
-    /* if you want IE7 support via HTML/body tag conditionals add the line below */
+    // if you want IE7 support via HTML/body tag conditionals add the line below
     $wi-ie7: true;
-    /* if you want to turn off the responsiveness of Waffleiron set this to false */
+    // if you want to turn off the responsiveness of Waffleiron set this to false
     $wi-responsive: true;
 
     @import 'waffleiron';
