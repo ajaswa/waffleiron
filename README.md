@@ -8,7 +8,7 @@ Because waffles are delicious.
 Do you take your waffles on Rails? Then use the latest stable release of
 Rails with waffle iron.
 
-  gem install waffleiron
+    gem install waffleiron
 
 ## Use
 
