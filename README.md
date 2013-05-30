@@ -3,6 +3,13 @@ Because waffles are delicious.
 
 ===========
 
+## Installation
+
+Do you take your waffles on Rails? Then use the latest stable release of
+Rails with waffle iron.
+
+  gem install waffleiron
+
 ## Use
 
 
@@ -63,7 +70,7 @@ HTML:
       </div>
     </section>
 
-Which would give you something like this: 
+Which would give you something like this:
 
 ![demo](https://github.com/ajaswa/waffleiron/raw/master/demo/demo.png)
 
