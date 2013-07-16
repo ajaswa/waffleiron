@@ -1,4 +1,4 @@
-require 'lib/waffleiron/version'
+require File.expand_path('../lib/waffleiron/version', __FILE__)
 
 desc 'build ruby gem'
 task :build do
