@@ -52,12 +52,20 @@ $wi-col-width: $wi-width / $wi-cols;
     width: $large-width;
   }
 }
+
+test-for-margins {
+  expect: to-equel(margin-math(1), $var);
+}
+
+@function margin-math($n) {
+  @return ($wi-col-width * $n) + ($wi-gutter/2);
+}
 // prepend and append do the same math but they are dependent on a number being passed in.
 @mixin prepend($n: 1) {
-  margin-left: ($wi-col-width * $n) + ($wi-gutter/2);
+  margin-left: margin-math($n);
 }
 @mixin append($n: 1) {
-  margin-right: ($wi-col-width * $n) + ($wi-gutter/2);
+  margin-right: margin-math($n);
 }
 @mixin width($n: 1) {
   width: ($n * $wi-col-width) - $wi-gutter;

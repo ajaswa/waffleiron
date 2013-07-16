@@ -1,4 +1,4 @@
-# Waffle Iron
+# Waffleiron
 Because waffles are delicious.
 
 ===========
@@ -57,16 +57,16 @@ HTML:
 
     <section>
       <div class="panel">
-        <h2>About Waffle Iron</h2>
-        <p>Waffle Iron is amazeballs, 0_o lol omg!!!11 one.</p>
+        <h2>About Waffleiron</h2>
+        <p>Waffleiron is amazeballs, 0_o lol omg!!!11 one.</p>
       </div>
       <div class="panel">
-        <h2>Download Waffle Iron</h2>
-        <p>Click the download Waffle Iron button hidden somewhere on this page.</p>
+        <h2>Download Waffleiron</h2>
+        <p>Click the download Waffleiron button hidden somewhere on this page.</p>
       </div>
       <div class="panel">
-        <h2>Help Waffle Iron</h2>
-        <p>If you have an awesome idea for Waffle Iron, git on github and do some stuff.</p>
+        <h2>Help Waffleiron</h2>
+        <p>If you have an awesome idea for Waffleiron, git on github and do some stuff.</p>
       </div>
     </section>
 
@@ -81,8 +81,8 @@ With the col() include you can specify two other parameters. After the number of
 
 This will give you an element two columns wide, prepended by one column and appended by 4 columns.
 
-## What is Waffle Iron?
-Waffle Iron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.
+## What is Waffleiron?
+Waffleiron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.
 
 
 ### What? No floats?
@@ -92,16 +92,16 @@ Pssh! No .col-06? No .fivecol? That's unpossible!
 The trick here is to use semantic markup and CSS for all you elements.
 
 ### Responsive by nature
-Built into Waffle Iron are some handy helpers to get your site all responsive. At a given point it will drop to a fluid layout and then down to a mobile layout. Turn them off if you would like.
+Built into Waffleiron are some handy helpers to get your site all responsive. At a given point it will drop to a fluid layout and then down to a mobile layout. Turn them off if you would like.
 
 ### Drop in grid
-Drop Waffle Iron in where you need a grid. Leave it out where it doesn't make sense. Write your CSS as fast as you can.
+Drop Waffleiron in where you need a grid. Leave it out where it doesn't make sense. Write your CSS as fast as you can.
 
 ## Why should I use it?
 Cause it's awesome and fast. If you don't want to use it half way through a project you can easily pull it out and write your own CSS without needing to rewrite your markup or change your CSS.
 
 ## Support
-Waffle Iron works without any hacks in Safari, Chrome, Firefox and IE8+. If you use html tag conditionals IE7 support is built in, otherwise you'll have to tweek some things by adding the following to your config block:
+Waffleiron works without any hacks in Safari, Chrome, Firefox and IE8+. If you use html tag conditionals IE7 support is built in, otherwise you'll have to tweek some things by adding the following to your config block:
 
     $wi-ie7: true;
 

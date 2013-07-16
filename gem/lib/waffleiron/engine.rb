@@ -1,4 +1,5 @@
+require 'sass'
+
 module Waffleiron
-  class Engine < Rails::Engine
-  end
+  Sass.load_paths << File.expand_path('../../app/assets/stylesheets/', __FILE__)
 end
