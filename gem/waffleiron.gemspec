@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.description       = %q{"Waffleiron is a "semantic" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works."}
   gem.summary           = %q{"Waffleiron is a flexable/responsive non-invasive SCSS grid system."}
   gem.homepage          = "http://github.com/ajaswa/waffleiron"
-  gem.extra_rdoc_files  = ['../README.md']
+  gem.extra_rdoc_files  = ['README.md']
 
   gem.files             = ['app/assets/stylesheets/_waffleiron.scss', 'lib/waffleiron/version.rb', 'lib/waffleiron/engine.rb', 'lib/waffleiron.rb']
   gem.name              = "waffleiron"
