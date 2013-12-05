@@ -53,10 +53,6 @@ $wi-col-width: $wi-width / $wi-cols;
   }
 }
 
-test-for-margins {
-  expect: to-equel(margin-math(1), $var);
-}
-
 @function margin-math($n) {
   @return ($wi-col-width * $n) + ($wi-gutter/2);
 }
