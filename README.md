@@ -1,6 +1,8 @@
 # Waffleiron
 Because waffles are delicious.
 
+[![Gem Version](https://badge.fury.io/rb/waffleiron.png)](http://badge.fury.io/rb/waffleiron)
+
 ===========
 
 ## Installation
