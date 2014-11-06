@@ -1,0 +1,23 @@
+{
+  "name": "waffleiron",
+  "version": "0.2.3",
+  "homepage": "https://github.com/ajaswa/waffleiron",
+  "authors": [
+    "Andrew Jaswa <ajaswa@gmail.com>"
+  ],
+  "description": "'Waffleiron is a \"semantic\" non-intrusive grid system powered by SASS/SCSS. No floats, no extra classes and no non-sense. It just works.'",
+  "main": "'_waffleiron.scss'",
+  "keywords": [
+    "scss",
+    "grid",
+    "waffles"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
